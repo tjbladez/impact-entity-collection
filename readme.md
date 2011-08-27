@@ -10,6 +10,7 @@ conversations on `#impactjs` IRC channel
 
 ### Plugins
 
+* impfaye - [Faye](http://faye.jcoglan.com/) plugin for impact js. Allows multiplayer, broadcasting and more
 
 ### Entities
 
