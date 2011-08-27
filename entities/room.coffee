@@ -6,29 +6,27 @@
 # you should use your own configuration - such as animation, tile size,
 # font position, number of players needed to start the game etc.
 ig.module(
-	'game.entities.room'
+  'game.entities.room'
 )
-.requires(
-	'impact.entity',
-	'impact.font'
+.requires
+  'impact.entity',
+  'impact.font'
 )
 .defines ->
   Room = ig.Entity.extend
-   size: {x: 192, y: 192}
-   animSheet: new ig.AnimationSheet('media/roomset.png', 192, 192)
-   fontSmall: new igFont
-   init: (x, y, opts) ->
-     this.addAnim('idle', 1, [0])
-     this.addAnim('hovered', 1, [1])
-
-     @name         = opts.name
-     @client       = opts.client
-     @subscription = @client.subscribe(@name, this.roomMsgHandler, @)
-     @playerCount  = 0
-     @currentAnim  = @anims['idle']
-
-     this.checkRoom()
-     this.parent(x,y)
+    size: {x: 192, y: 192}
+    animSheet: new ig.AnimationSheet('media/roomset.png', 192, 192)
+    fontSmall: new igFont
+    init: (x, y, opts) ->
+      this.addAnim('idle', 1, [0])
+      this.addAnim('hovered', 1, [1])
+      @name         = opts.name
+      @client       = opts.client
+      @subscription = @client.subscribe(@name, this.roomMsgHandler, @)
+      @playerCount  = 0
+      @currentAnim  = @anims['idle']
+      this.checkRoom()
+      this.parent(x,y)
     draw: ->
       this.parent
       # always show number of players connected at the moment
