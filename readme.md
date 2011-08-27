@@ -6,6 +6,7 @@ conversations on `#impactjs` IRC channel
 ### Servers
 
 * room - express js server with multiplayer room functionality built on top of faye
+* uproar - express js server with broadcasting messages to clients based on params received (taken from [Uproar](https://github.com/tjbladez/uproar/blob/master/server.coffee))
 
 ### Plugins
 
