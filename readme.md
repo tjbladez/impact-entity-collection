@@ -1,7 +1,9 @@
 ## Collection of impact related entities and servers ##
 
-Here you will find a collection of useful entities, servers, plugins including for multiplayer that are constantly coming up during
-conversations on `#impactjs` IRC channel
+Here you will find a collection of useful entities, servers, plugins including ones for multiplayer that are constantly coming up during
+conversations on `#impactjs` IRC channel.
+
+Most of the code is written in [CoffeeScript](http://jashkenas.github.com/coffee-script/) so just compile it to js if you need javascript versions.
 
 ### Servers
 
@@ -14,4 +16,4 @@ conversations on `#impactjs` IRC channel
 
 ### Entities
 
-
+* room - Entity used in conjunction with room server. Represents a room for 2 players to join.
